@@ -1,0 +1,56 @@
+package org.jfree.data.test;
+
+import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
+
+public class RangeTest {
+    private Range exampleRange;
+    @BeforeClass public static void setUpBeforeClass() throws Exception {
+    }
+
+
+    @Before
+    public void setUp() throws Exception { exampleRange = new Range(-10, 20);
+    }
+
+    //Intersect Tests
+
+    @Test
+    public void intersectPassc1() {
+    	
+        assertEquals("The statement should be true", true, exampleRange.intersects(1,5));
+    }
+    
+    @Test
+    public void intersectPassc2() {
+    	
+        assertEquals("The statement should be true", true, exampleRange.intersects(1,1));
+    }
+    
+    @Test
+    public void intersectPassc3() {
+    	
+        assertEquals("The statement should be true", true, exampleRange.intersects(1,2));
+    }
+    
+    @Test
+    public void intersectFailc3() {
+    	
+        assertFalse("The statement should be false", exampleRange.intersects(1,0));
+    }
+    
+    @Test
+    public void intersectFailc4() {
+    	
+        assertFalse("The statement should be false", exampleRange.intersects(5,0));
+    }
+    
+    
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
+    }
+}

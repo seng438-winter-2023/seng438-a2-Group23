@@ -1,0 +1,99 @@
+package org.jfree.data.test;
+
+import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
+
+public class RangeTest {
+    private Range exampleRange;
+    @BeforeClass public static void setUpBeforeClass() throws Exception {
+    }
+
+
+    @Before
+    public void setUp() throws Exception { exampleRange = new Range(-10, 20);
+    }
+
+    //Intersect Tests
+
+    @Test
+    public void intersectNormalTest() {
+    	
+        assertTrue("The statement should be true", exampleRange.intersects(1,5));
+    }
+    
+    @Test
+    public void intersectBoundaryTest() {
+    	
+        assertTrue("The statement should be true", exampleRange.intersects(1,1));
+    }
+    
+    @Test
+    public void intersectAboveUpperTest() {
+    	
+        assertTrue("The statement should be true", exampleRange.intersects(1,2));
+    }
+    
+    @Test
+    public void intersectLowerUpperTest() {
+    	
+        assertFalse("The statement should be false", exampleRange.intersects(1,0));
+    }
+    
+    @Test
+    public void intersectFailLowerTest() {
+    	
+        assertFalse("The statement should be false", exampleRange.intersects(5,0));
+    }
+    
+    //Combine Tests
+    
+    @Test
+    public void shiftValidPositive() {
+    	Range shiftRange = new Range(-10,15);
+    	shiftRange = shiftRange.shift(shiftRange, 12.5);
+        assertEquals("The Upperbound should be 2.5",
+        2.5, shiftRange.getLowerBound(), .000000001d);
+    }
+    
+    @Test
+    public void shiftValidZero() {
+    	Range shiftRange = new Range(-10,15);
+    	shiftRange = shiftRange.shift(shiftRange,0);
+        assertEquals("The Upperbound should be -10",
+        -10, shiftRange.getLowerBound(), .000000001d);
+    }
+    
+    @Test
+    public void shiftValidNegative() {
+    	Range shiftRange = new Range(-10,15);
+    	shiftRange = shiftRange.shift(shiftRange,-22.6);
+        assertEquals("The Upperbound should be -32.6",
+        -32.6, shiftRange.getLowerBound(), .000000001d);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void NullPositive() {
+    	Range shiftRange = null;
+    	shiftRange = shiftRange.shift(null,15);
+    }
+    
+//    @Test(expected = IllegalArgumentException.class)
+//    public void combineNullZero() {
+//    	Range shiftRange = new Range(-10,15);
+//    	shiftRange = shiftRange.shift(null,0);
+//    }
+    
+//    @Test(expected = IllegalArgumentException.class)
+//    public void combineNullNegative() {
+//    	Range shiftRange = new Range(-10,15);
+//    	shiftRange = shiftRange.shift(null,-22.6);
+//    	assertEquals("The Range Should Return NULL", shiftRange.getLowerBound());
+//    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
+    }
+}

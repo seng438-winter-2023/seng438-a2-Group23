@@ -1,0 +1,30 @@
+package org.jfree.data.test;
+
+import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
+
+public class RangeTest {
+    private Range exampleRange;
+    @BeforeClass public static void setUpBeforeClass() throws Exception {
+    }
+
+
+    @Before
+    public void setUp() throws Exception { exampleRange = new Range(-10, 20);
+    }
+
+
+    @Test
+    public void intersectPassc1() {
+    	
+        assertEquals("The statement should be true",
+        true, exampleRange.intersects(1,5));
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
+    }
+}
