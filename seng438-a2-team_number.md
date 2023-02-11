@@ -20,10 +20,7 @@ Text…
 # 3 Test cases developed
 
 |Class Name |  Method Name | Input Values | Relevant Conditions | Pass/Fail Criteria |
-|------------------------------------------------------------------------------------|
-|                                                                                    |
-|                                                                                    |
-|                                                                                    |
+
 
 
 // write down the name of the test methods and classes. Organize the based on
