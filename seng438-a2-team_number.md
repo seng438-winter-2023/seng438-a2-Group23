@@ -25,12 +25,11 @@ Partition for Intersect Method:
 - C4: The upper bound is less than the lower bound.
 
 
-| Class Name | Method Name | Input Values | Relevant Conditions | Pass/Fail Criteria |
-| -------------- | --- |---|---|---|---|
-| Student Names: |     ||
-|                |     ||
-|                |     ||
-|                |     ||
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
 
 
 
