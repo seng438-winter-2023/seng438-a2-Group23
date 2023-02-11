@@ -17,7 +17,11 @@ In this lab assignment, we are going to create automated tests using JUnit and o
 
 In the org.jfree.data.Range, we decided to perform unit testing on the following 5 methods. Those 5 methods include intersect, shift, expandToInclude, contains and combine. To understand the functionality of these methods, we began with studying the Javadoc file for the org.jfree.data.Rage class. Once we were familiar with the functionality of each method, it was straightforward to write the unit tests. For the methods that we tested, we tried to use the best case equivalence class testing. The constructor for the range class takes in two integers and make a range based on the lower and upper bound, aka the two integer arguments. Below are all the function that we tested and the way we tested them.
 
+
+
 Tests done in the Range class:
+
+
 
 Combine(Range range1, Range range2): The combine function takes in two Range objects and returns a Range object. The returned Range object is created by combining the two existing ranges given in the argument. We tested this method by passing a combination of null ranges, positive ranges, negative ranges, and zero ranges. 
 
@@ -28,7 +32,12 @@ Intersects(double lower, double upper): The intersects function was tested with 
 Shift(Range base, double delta): The shift function was tested with equivalence class testing. It takes a range object and a double value. It returns a range the size of the input range, which has been moved positively by the double value. We tested this method by passing valid range, null range, positive number for delta, negative number for delta, and 0 for delta.
 Contains(double value): The contains function was tested with equivalence class testing. It takes in a double value to check if it is contained in a range. This function returns true if the value is within the range and false other wise. Testing this method was straightforward. We tested this function with the lower bound – 1, lower bound, lower bound + 1, numbers between the lower and upper bound, upper bound – 1, upper bound, and upper bound + 1.
 
+
+
 Tests done in the DataUtilities class:
+
+
+
 calculateColumnTotal(Values2D values, int column): This function takes in a Values2D object and an integer for the column number as arguments. It returns the sum of the values in one column of the supplied data table. With invalid input, a total of zero will be returned. To test this function, we performed equivalence class testing. We split the tests into two classes. One class includes null values, and the other class includes positive and negative numbers. We wanted to make sure that the function performs as intended for all the possible values. 
 
 calculateRowTotal(Values2D values, int row): This function takes in a Values2D object and an integer for the row number as arguments. It returns the sum of the values in one row of the supplies data table. With invalid input, a total of zero will be returned. To test this function, we performed equivalence class testing. We did two equivalence classes that include null values as the first class and positive and negative values as the second class. We wanted to make sure that the functions work for all three of these inputs. We wanted to ensure that select a row as well as summing the values was tested.
