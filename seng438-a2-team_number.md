@@ -144,6 +144,11 @@ Partitions for the CalculateRowTotal Method:
 | DataUtilities      | calculateRowValidListAboveColumns | (Valid, Number > Rows)       | C2, C6                  | Fail               |
 
 Partitions for the CreateNumberArray Method:
+- C1: Data is null.
+- C2: Data is positive numbers.
+- C3: Data is negative numbers.
+- C4: Data is zeros.
+- C5: Data is positive/negative numbers.
 
 | Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
 |------------|-------------------------|--------------|---------------------|--------------------|
@@ -152,6 +157,7 @@ Partitions for the CreateNumberArray Method:
 | DataUtilities      |createNumberArrayNegative  | (Negative)       | C3             | Fail               |
 | DataUtilities      | createNumberArrayZero | (0)       | C4                 | Fail               |
 | DataUtilities      | createNumberArrayPositiveNegative | (Positive/Negative)       | C5                  | Fail               |
+
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
 you have explained in the test strategy section //above
