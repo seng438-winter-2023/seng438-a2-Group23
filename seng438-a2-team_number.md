@@ -18,6 +18,7 @@ Text…
 // including the input partitions you have designed
 
 # 3 Test cases developed
+## Tests cases for the Range Class Methods
 Partitions for Intersect Method:
 - C1: The lower bound is less than or equal to the upper bound.
 - C2: The lower bound is greater than the upper bound.
@@ -104,6 +105,26 @@ Partitions for Combine Method:
 | Range      | TestValidAndValidUpperBound    | (Valid, Valid)       | C3              | Pass               |
 | Range      | TestNullAndNullUpperBound | (Valid, Valid)       | C3              | Pass               |
 
+## Tests cases for the DataUtilities Class Methods
+Partitions for the CalculateColumnTotal Method:
+- C1: Data is null.
+- C2: Data is valid.
+- C3: Number is less than or equal to columns.
+- C4: Numer is greater than or equal to zero.
+- C5: Number is less than zero.
+- C6: Number is greater than columns.
+
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| DataUtilities      | calculateColumnTotalForNullLessColumn     | (Null, Number <= Columns)       | C1, C3              | Pass               |
+| DataUtilities      | calculateColumnTotalForNullEqualZero    | (Null, Number >= 0)       | C1, C4              | Pass               |
+| DataUtilities      | calculateColumnTotalForNullLargeColumn | (Null, Number < 0)       | C1, C5              | Pass               |
+| DataUtilities      | calculateColumnTotalForNullLowerZero | (Null, Number > Columns)       | C1, C6                  | Pass               |
+| DataUtilities      | calculateColumnTotalNominalValue | (Valid, Number <= Columns)       | C2, C3                  | Pass               |
+
+| DataUtilities      | calculateColumnValidListAboveZero | (Valid, Number >= 0)       | C2, C4                  | Pass               |
+| DataUtilities      | calculateColumnValidListBelowZero | (Valid, Number < 0)       | C2, C5                  | Fail               |
+| DataUtilities      | calculateColumnValidListAboveColumns | (Valid, Number > Columns)       | C2, C6                  | Fail               |
 
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
