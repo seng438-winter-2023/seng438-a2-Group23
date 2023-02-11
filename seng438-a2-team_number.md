@@ -15,7 +15,7 @@ Text…
 
 # 2 Detailed description of unit test strategy
 
-// including the input partitions you have designed
+// including the input partitions you have designe
 
 # 3 Test cases developed
 ## Tests cases for the Range Class Methods
