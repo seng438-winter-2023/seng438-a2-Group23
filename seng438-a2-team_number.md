@@ -18,6 +18,12 @@ Text…
 // including the input partitions you have designed
 
 # 3 Test cases developed
+Partition for Intersect Method:
+-C1: The lower bound is less than or equal to the upper bound.
+-C2: The lower bound is greater than the upper bound.
+-C3: The upper bound is greater than or equal to the lower bound.
+-C4: The upper bound is less than the lower bound.
+
 
 | Group \#:      |     ||
 | -------------- | --- |---|
