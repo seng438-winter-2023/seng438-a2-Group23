@@ -29,7 +29,8 @@ Partition for Intersect Method:
 | Range      | intersectNormalTest     | (1, 5)       | C1, C3              | Pass               |
 | Range      | intersectBoundryTest    | (1, 1)       | C1, C3              | Pass               |
 | Range      | intersectAboveUpperTest | (1, 2)       | C1, C3              | Pass               |
-| Range      | intersectAboveUpperTest | (1, 2)       | C1, C3              | Pass               |
+| Range      | intersectBelowLowerTest | (1, 0)       | C4                  | Pass               |
+| Range      | intersectFailLowerTest | (5, 0)       | C2                  | Pass               |
 
 
 
