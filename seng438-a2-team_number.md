@@ -175,10 +175,21 @@ Partitions for the CreateNumberArray2D Method:
 | DataUtilities      | create2DNumberArrayNegativePositive | (Negative/Positive)       | C5                  | Fail               |
 | DataUtilities      | create2DNumberArrayZero | (0)       | C5                  | Fail               |
 
+Partitions for the GetCumulativePercentanges:
+- C1: Data is null.
+- C2: Data is positive numbers.
+- C3: Data is negative numbers.
+- C4: Data is positive/negative numbers.
+- C5: Data is zeros.
 
-// write down the name of the test methods and classes. Organize the based on
-the source code method // they test. identify which tests cover which partitions
-you have explained in the test strategy section //above
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| DataUtilities      |  getCumulativePercentsNull    | (Null)       | C1              | Pass               |
+| DataUtilities      |  getCumulativePercentsPositive   | (Positive)       | C2              | Fail               |
+| DataUtilities      | getCumulativePercentsNegative | (Negative)       | C3             | Fail               |
+| DataUtilities      | getCumulativePercentsPositiveNegative | (Positive/Negative)       | C4                 | Fail               |
+| DataUtilities      | getCumulativePercentsZero | (0)       | C5                  | Fail               |
+
 
 # 4 How the team work/effort was divided and managed
 
