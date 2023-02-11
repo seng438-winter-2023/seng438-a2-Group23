@@ -47,7 +47,7 @@ Partitions for Shift Method:
 | Range      | shiftPositive | (Null, 15)       | C2, C4                  | Pass               |
 | Range      | shiftNullNegative | (Null, -22.6)       | C2, C6                  | Pass               |
 
-Partitions for ExpandToInclude:
+Partitions for ExpandToInclude Method:
 - C1: The range is valid.
 - C2: The range is null.
 - C3: The value is above the upper bound.
@@ -67,6 +67,42 @@ Partitions for ExpandToInclude:
 | Range      | TestNegativeValueLowerBound     | (Valid, -1)       | C1, C4              | Fail               |
 | Range      | TestNegativeValueUpperBound    | (Valid, -1)       | C1, C4              | Fail               |
 
+Partitions for Contains Method:
+- C1: A value just below the lower bound (BLB).
+- C2: The value on the lower boundary (LB).
+- C3: A value just above the lower boundary (ALB).
+- C4: A nominal value (NOM).
+- C5: A value just below the upper bound (BUB).
+- C6: The value on the upper bound (UB).
+- C7: A value just above the upper bound (AUB).
+
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| Range      | containsBelowLowerBound     | (-11)       | C1              | Fail               |
+| Range      | containLowerBound    | (-10)      | C2              | Pass               |
+| Range      | containAboveLowerBound | (-9.67)       | C3              | Pass               |
+| Range      | containNominal | (5.21)      | C4                  | Pass               |
+| Range      | containBelowUpperBound | (19.934)       | C5                  | Pass               |
+
+| Range      | containUpperBound | (20)       | C6            | Pass               |
+| Range      | containAboveUpperBound | (21)       | C7                  | Fail               |
+
+Partitions for Combine Method:
+- C1: Range a is null and b is valid. 
+- C2: Range a is valid and b is null.
+- C3: Ranges a and b are valid.
+- C4: Ranges a and b are null.
+
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| Range      | TestNullAndValidLowerBound     | (Null, Valid)       | C1              | Pass               |
+| Range      | TestNullAndValidUpperBound    | (Null, Valid)       | C1              | Fail               |
+| Range      | TestValidAndNullLowerBound | (Valid, Null)       | C2              | Pass               |
+| Range      | TestValidAndNullUpperBound | (Valid, Null)       | C2                  | Fail               |
+| Range      | TestNullAndNullLowerBound | (Null, Null)       | C4                  | Pass               |
+| Range      | TestNullAndNullUpperBound     | (Null, Null)       | C4              | Pass               |
+| Range      | TestValidAndValidUpperBound    | (Valid, Valid)       | C3              | Pass               |
+| Range      | TestNullAndNullUpperBound | (Valid, Valid)       | C3              | Pass               |
 
 
 // write down the name of the test methods and classes. Organize the based on
