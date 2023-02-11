@@ -143,6 +143,15 @@ Partitions for the CalculateRowTotal Method:
 | DataUtilities      | calculateRowValidListBelowZero | (Valid, Number < 0)       | C2, C5                  | Fail               |
 | DataUtilities      | calculateRowValidListAboveColumns | (Valid, Number > Rows)       | C2, C6                  | Fail               |
 
+Partitions for the CreateNumberArray Method:
+
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| DataUtilities      |  createNumberArrayNull    | (Null)       | C1              | Pass               |
+| DataUtilities      | createNumberArrayPositive    | (Positive)       | C2              | Fail               |
+| DataUtilities      |createNumberArrayNegative  | (Negative)       | C3             | Fail               |
+| DataUtilities      | createNumberArrayZero | (0)       | C4                 | Fail               |
+| DataUtilities      | createNumberArrayPositiveNegative | (Positive/Negative)       | C5                  | Fail               |
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
 you have explained in the test strategy section //above
