@@ -18,13 +18,12 @@ Text…
 // including the input partitions you have designed
 
 # 3 Test cases developed
-
-Class Name	Method Name	Input Values	Relevant Conditions	Pass/Fail Criteria
-Range	intersectNormalTest	(1, 5) 	C1, C3	Pass
-Range	intersectBoundryTest	(1, 1)	C1, C3	Pass
-Range 	intersectAboveUpperTest	(1, 2)	C1, C3	Pass
-Range	intersectBelowLowerTest	(1, 0)	C4	Pass
-Range	intersectFailLowerTest	(5, 0)	C2	Pass
+-------------------------------------------------------------------------------------|
+|Class Name |  Method Name | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------------------------------------------------------------------------------|
+|                                                                                    |
+|                                                                                    |
+|------------------------------------------------------------------------------------|
 
 
 // write down the name of the test methods and classes. Organize the based on
