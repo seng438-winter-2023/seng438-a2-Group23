@@ -19,12 +19,12 @@ Text…
 
 # 3 Test cases developed
 
-| Group \#:      |     |
-| -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Group \#:      |     ||
+| -------------- | --- |---|
+| Student Names: |     ||
+|                |     ||
+|                |     ||
+|                |     ||
 
 
 
