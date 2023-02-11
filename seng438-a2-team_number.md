@@ -18,7 +18,7 @@ Text…
 // including the input partitions you have designed
 
 # 3 Test cases developed
-Partition for Intersect Method:
+Partitions for Intersect Method:
 - C1: The lower bound is less than or equal to the upper bound.
 - C2: The lower bound is greater than the upper bound.
 - C3: The upper bound is greater than or equal to the lower bound.
@@ -32,6 +32,20 @@ Partition for Intersect Method:
 | Range      | intersectBelowLowerTest | (1, 0)       | C4                  | Pass               |
 | Range      | intersectFailLowerTest | (5, 0)       | C2                  | Pass               |
 
+Partitions for Shift Method:
+- C1: The range is valid.
+- C2: The range is null.
+- C3: The value is positive.
+- C4: The value is zero.
+- C5: The value is negative.
+
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| Range      | shiftValidPositive     | (Valid, 12.5)       | C1, C3              | Pass               |
+| Range      | shiftValidZero    | (Valid, 0)       | C1, C5              | Pass               |
+| Range      | shiftValidNegative | (Valid, -22.6)       | C1, C3              | Pass               |
+| Range      | shiftPositive | (Null, 15)       | C2, C4                  | Pass               |
+| Range      | shiftNullNegative | (Null, -22.6)       | C2, C6                  | Pass               |
 
 
 // write down the name of the test methods and classes. Organize the based on
