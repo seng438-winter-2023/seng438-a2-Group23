@@ -120,10 +120,28 @@ Partitions for the CalculateColumnTotal Method:
 | DataUtilities      | calculateColumnTotalForNullLargeColumn | (Null, Number < 0)       | C1, C5              | Pass               |
 | DataUtilities      | calculateColumnTotalForNullLowerZero | (Null, Number > Columns)       | C1, C6                  | Pass               |
 | DataUtilities      | calculateColumnTotalNominalValue | (Valid, Number <= Columns)       | C2, C3                  | Pass               |
-
 | DataUtilities      | calculateColumnValidListAboveZero | (Valid, Number >= 0)       | C2, C4                  | Pass               |
 | DataUtilities      | calculateColumnValidListBelowZero | (Valid, Number < 0)       | C2, C5                  | Fail               |
 | DataUtilities      | calculateColumnValidListAboveColumns | (Valid, Number > Columns)       | C2, C6                  | Fail               |
+
+Partitions for the CalculateRowTotal Method:
+- C1: Data is null.
+- C2: Data is valid.
+- C3: Number is less than or equal to rows.
+- C4: Numer is greater than or equal to zero.
+- C5: Number is less than zero.
+- C6: Number is greater than rows.
+
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| DataUtilities      | calculateRowTotalForNullLessRow     | (Null, Number <= Rows)       | C1, C3              | Pass               |
+| DataUtilities      | calculateRowTotalForNullAtZero    | (Null, Number >= 0)       | C1, C4              | Pass               |
+| DataUtilities      | calculateRowTotalForNullLargeColumn | (Null, Number < 0)       | C1, C5              | Pass               |
+| DataUtilities      | calculateRowTotalForNullLowerZero | (Null, Number > Rows)       | C1, C6                  | Pass               |
+| DataUtilities      | calculateRowTotalNominalValue | (Valid, Number <= Rows)       | C2, C3                  | Fail               |
+| DataUtilities      | calculateRowValidListAboveZero | (Valid, Number >= 0)       | C2, C4                  | Fail               |
+| DataUtilities      | calculateRowValidListBelowZero | (Valid, Number < 0)       | C2, C5                  | Fail               |
+| DataUtilities      | calculateRowValidListAboveColumns | (Valid, Number > Rows)       | C2, C6                  | Fail               |
 
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
