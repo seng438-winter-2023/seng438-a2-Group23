@@ -84,7 +84,6 @@ Partitions for Contains Method:
 | Range      | containAboveLowerBound | (-9.67)       | C3              | Pass               |
 | Range      | containNominal | (5.21)      | C4                  | Pass               |
 | Range      | containBelowUpperBound | (19.934)       | C5                  | Pass               |
-
 | Range      | containUpperBound | (20)       | C6            | Pass               |
 | Range      | containAboveUpperBound | (21)       | C7                  | Fail               |
 
