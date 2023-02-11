@@ -88,7 +88,7 @@ public class RangeTest {
     }
 
     @Test(expected = java.lang.NullPointerException.class)
-    public void combineNullNegative() {
+    public void shiftNullNegative() {
         Range shiftRange = new Range(-10, 15);
         shiftRange = Range.shift(null, -22.6);
         assertEquals("The Range Should Return NULL", shiftRange.getLowerBound());
