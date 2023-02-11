@@ -23,13 +23,11 @@ Partition for Intersect Method:
 - C2: The lower bound is greater than the upper bound.
 - C3: The upper bound is greater than or equal to the lower bound.
 - C4: The upper bound is less than the lower bound.
-
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+| Class Name | Method Name             | Input Values | Relevant Conditions | Pass/Fail Criteria |
+|------------|-------------------------|--------------|---------------------|--------------------|
+| Range      | intersectNormalTest     | (1, 5)       | C1, C3              | Pass               |
+| Range      | intersectBoundryTest    | (1, 1)       | C1, C3              | Pass               |
+| Range      | intersectAboveUpperTest | (1, 2)       | C1, C3              | Pass               |
 
 
 
