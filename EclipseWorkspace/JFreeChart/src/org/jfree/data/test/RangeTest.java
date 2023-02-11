@@ -176,7 +176,22 @@ public class RangeTest {
         assertNull("Expected lower bound is null. Actual lower bound is ", lower_bound);
     }
     // null + null = null
+     @Test
+    public void TestValidAndValidLowerBound() {
+        Range range = Range.combine(new Range(5, 10), new Range(2, 4));
+        double lower_bound = range.getLowerBound();
+        assertEquals("Expected lower bound is 2.0. Actual lower bound is " + lower_bound, 2.0, lower_bound,
+                .000000001d);
+    }
 
+    // null + 2-4 = 2-4
+    @Test
+    public void TestValidAndValidUpperBound() {
+        Range range = Range.combine(new Range(5, 10), new Range(2, 4));
+        double upper_bound = range.getUpperBound();
+        assertEquals("Expected upper bound is 10.0. Actual upper bound is " + upper_bound, 10.0, upper_bound,
+                .000000001d);
+    }
     @Test(expected = java.lang.NullPointerException.class)
     public void TestNullAndNullUpperBound() {
         Range range = Range.combine(null, null);
